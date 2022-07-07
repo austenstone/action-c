@@ -18,16 +18,16 @@ jobs:
         id: lpf
       - run: echo "The Largest Prime Factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
 ```
+# Parameters
+Various inputs/ouputs are defined in [`action.yml`](action.yml):
 
 ## ➡️ Input
-Various inputs are defined in [`action.yml`](action.yml):
 
 | Name | Description | Default |
 | --- | - | - |
 | **number** | Number to find the largest prime factor of. | N/A |
 
 ## ⬅️ Output
-Various inputs are defined in [`action.yml`](action.yml):
 
 | Name | Description |
 | --- | - |
