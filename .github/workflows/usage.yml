@@ -22,5 +22,5 @@ jobs:
         with:
           number: ${{ inputs.number }}
         id: lpf
-      - name: Log levels
-        run: echo "::notice::The Largest Prime Factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
+      - name: Print
+        run: echo "::notice::The largest prime factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
