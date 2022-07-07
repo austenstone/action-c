@@ -30,3 +30,8 @@ jobs:
           echo "This is an info message"
           echo "::warning::This is a warning"
           echo "::error::This is an error"    
+
+      - uses: actions/github-script@v5
+        name: Print the response text
+        with:
+          script: core.notice('${{ steps.lpf.outputs.largest-prime-factor }})
