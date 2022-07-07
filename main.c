@@ -26,6 +26,6 @@ int main(int argc, char **argv) {
     } else {
         number = atoi(argv[1]);
     }
-    printf("::set-output name=largest_prime_factor::%d\n", largest_prime_factor(number));
+    printf("::set-output name=largest-prime-factor::%d\n", largest_prime_factor(number));
     return 0;
 }

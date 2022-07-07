@@ -11,7 +11,7 @@ inputs:
     required: true
 
 outputs:
-  largest_prime_factor:
+  largest-prime-factor:
     description: The largest prime factor of the number
 
 runs:
