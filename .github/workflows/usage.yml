@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./
         with:
-          number: ${{ inputs.number }}
+          number: ${{ inputs.number || 1000 }}
         id: lpf
       - name: Print
         run: echo "::notice::The largest prime factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
