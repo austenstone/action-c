@@ -15,14 +15,23 @@ jobs:
       - uses: austenstone/action-c@main
         with:
           number: 1000
+        id: lpf
+      - run: echo "The Largest Prime Factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
 ```
 
-## ➡️ Input Settings
+## ➡️ Input
 Various inputs are defined in [`action.yml`](action.yml):
 
 | Name | Description | Default |
 | --- | - | - |
 | **number** | Number to find the largest prime factor of. | N/A |
+
+## ⬅️ Output
+Various inputs are defined in [`action.yml`](action.yml):
+
+| Name | Description |
+| --- | - |
+| **largest-prime-factor** | The largest prime factor of the number. |
 
 ## Further help
 To get more help on the Actions see [documentation](https://docs.github.com/en/actions).
