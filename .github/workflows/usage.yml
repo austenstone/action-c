@@ -1,6 +1,10 @@
 name: Usage
 
 on:
+  workflow_dispatch:
+    inputs:
+      number:
+        default: "1000"
   pull_request:
     paths-ignore:
       - "**.md"
@@ -16,6 +20,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./
         with:
-          number: 1000
+          number: ${{ inputs.number }}
         id: lpf
       - run: echo "The Largest Prime Factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
