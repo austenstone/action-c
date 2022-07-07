@@ -1,6 +1,5 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/austenstone/source/action-c'
-cc    -c -o main.o main.c
-gcc -o action.exe main.o
+make: Nothing to be done for `all'.
 make: Leaving directory `/Users/austenstone/source/action-c'
  

@@ -1,16 +1,21 @@
 name: C Action
 author: Austen Stone
-description: A C Action
+description: Calculate largest prime factor
 branding:
   icon: "plus"
   color: "blue"
 
 inputs:
-  github-token:
-    description: The GitHub token used to create an authenticated client
-    default: ${{ github.token }}
-    required: false
+  number:
+    description: Number to find the largest prime factor of
+    required: true
+
+outputs:
+  largest_prime_factor:
+    description: The largest prime factor of the number
 
 runs:
-  using: "node16"
-  main: "dist/index.js"
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.number }}
