@@ -22,16 +22,5 @@ jobs:
         with:
           number: ${{ inputs.number }}
         id: lpf
-      - run: echo "The Largest Prime Factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
-      - run: echo "::notice The Largest Prime Factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
       - name: Log levels
-        run: |
-          echo "::debug::This is a debug message"
-          echo "This is an info message"
-          echo "::warning::This is a warning"
-          echo "::error::This is an error"    
-
-      - uses: actions/github-script@v5
-        name: Print the response text
-        with:
-          script: core.notice('${{ steps.lpf.outputs.largest-prime-factor }}')
+        run: echo "::notice::The Largest Prime Factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
