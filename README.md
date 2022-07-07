@@ -4,7 +4,7 @@
 
 ### Default Workflow
 ```yml
-name: "Add to Project"
+name: "Find Largest Prime Number"
 on:
   workflow_dispatch:
 
