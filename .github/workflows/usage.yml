@@ -18,11 +18,4 @@ jobs:
         with:
           number: 1000
         id: lpf
-    outputs:
-      largest-prime-factor: ${{ steps.lpf.outputs.largest-prime-factor }}
-
-  print:
-    runs-on: ubuntu-latest
-    needs: [use]
-    steps:
-      - run: echo "Largest Prime Factor is ${{ needs.use.outputs.largest-prime-factor }}!"
+      - run: echo "The Largest Prime Factor is ${{ lpf.outputs.largest-prime-factor }}."
