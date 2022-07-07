@@ -23,3 +23,4 @@ jobs:
           number: ${{ inputs.number }}
         id: lpf
       - run: echo "The Largest Prime Factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
+      - run: echo "::notice The Largest Prime Factor is ${{ steps.lpf.outputs.largest-prime-factor }}."
