@@ -7,4 +7,4 @@ action.o: main.c
 	 gcc -c main.c
      
 clean:
-	 rm main.o action.exe``
+	 rm main.o action.exe
